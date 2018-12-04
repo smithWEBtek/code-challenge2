@@ -1,0 +1,15 @@
+Task
+Create a page that makes the below API request and uses the contents of the JSON response to build a responsive Taboola widget with the following requirements.
+
+API Request:
+
+https://api.taboola.com/1.2/json/apitestaccount/recommendations.get?app.type=web&app.apikey=7be65fc78e52c11727793f68b06d782cff9ede3c&source.id=%2Fdigiday-publishing-summit%2F&source.url=https%3A%2F%2Fblog.taboola.com%2Fdigiday-publishing-summit%2F&source.type=text&placement.organic-type=mix&placement.visible=true&placement.available=true&placement.rec-count=6&placement.name=Below%20Article%20Thumbnails&placement.thumbnail.width=640&placement.thumbnail.height=480&user.session=init
+
+Requirements:
+
+1)	For desktop and tablet, the widget should be three columns and two rows (3x2). Include the item title and branding below each image. Add a header to the top of the widget with your choice of text.
+2)	For smartphone, the widget should be one column with six rows (1x6). Include the item title and branding below each image. Add a header to the top of the widget with your choice of text.
+3)	For each item in the widget, the thumbnail image, item title, and branding text should be clickable links that load the url of that item (use the corresponding item url value provided in the response).
+
+Please refer to the below Taboola Widget Glossary for identification of the elements that make up the widget. You are welcome to use similar styling for the widget you build, or you can do something different. For reference, you can see a live responsive Taboola widget in the wild at the bottom of the article on this page: 
+http://www.latimes.com/business/la-fi-nike-colin-kaepernick-20180904-story.html
