@@ -10,11 +10,13 @@ fetch('https://api.taboola.com/1.2/json/apitestaccount/recommendations.get?app.t
 );
 renderList = () => {
 	renderListHTML = list.map((item, index) => {
-		return (`<ol id=${index}>
-							<li>${item.description}</li>
-							<li>${item.name}</li>
-							</ol>
-							`)
+		return (
+			`<ol id=${index}>
+				<li>${item.description}</li>
+				<li>${item.name}</li>
+				</ol>
+			`
+		)
 	})
 	loadHtml()
 }
