@@ -8,13 +8,31 @@ fetch('https://api.taboola.com/1.2/json/apitestaccount/recommendations.get?app.t
 		renderList
 	)
 );
+
+
 renderList = () => {
+
+	debugger;
+
 	renderListHTML = list.map((item, index) => {
+
 		return (
-			`<ol id=${index}>
-				<li>${item.description}</li>
-				<li>${item.name}</li>
-				</ol>
+			`<p id=${index}>
+				<h2>${item.name}</h2><br>
+				<img src=${item.thumbnail[0].url} height=${item.thumbnail[0].height} width=${item.thumbnail[0].width} alt=${item.name}/><br>
+				<h4>${item.description}</h4>
+				type: ${item.type}<br>
+				name: ${item.name}<br>
+				created: ${item.created}<br>
+				branding: ${item.branding}<br>
+				duration: ${item.duration}<br>
+				categories: ${item.categories}<br>
+				views: ${item.views}<br>
+				pixels: ${item.pixels}<br>
+				id: ${item.id}<br>
+				origin: ${item.origin}<br>
+				url: ${item.url}<br>
+				</p>
 			`
 		)
 	})
