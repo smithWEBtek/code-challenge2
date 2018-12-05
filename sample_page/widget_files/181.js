@@ -1,0 +1,1 @@
+!function(){var i={fbPixelId:"497472043734658",domain:".latimes.com",appId:181,in_eu:!1,ping_activity:!1,snowplow_src:"//cdn.keywee.co/dist/sp-2.9.1.js"};window&&window.kwa&&window.kwa("loadConfig",i)}();

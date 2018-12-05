@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://s0.2mdn.net/dfp/262976/4658668233/1543885397543/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+		
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+		<title>BMW</title>
+		<meta name="ad.size" content="width=728,height=90">
+		<script>
+			var clickTag = "https://www.bmw.com";
+			var sw, sh, sizeType;
+			sw = 728;
+			sh = 90;
+			sw = Number(sw);
+			sh = Number(sh);
+			var sizeType = sw + "x" + sh;
+			var fSize = "{{FILESIZE}}";
+			var concept = "Banners-Winter-Credit-JAN2-NoDealer";
+		</script>
+		<style>
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+		html, html a {
+			font-smooth: always;
+			-webkit-font-smoothing: antialiased;
+		}
+		* {
+			-webkit-tap-highlight-color: transparent;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}
+		#banner {
+			position: relative;
+			width: 728px;
+			height: 90px;
+			overflow: hidden;
+			opacity: 0;
+		}
+		.fs {
+			position: absolute;
+			background-size: 100% 100%;
+			width: 728px;
+			height: 90px;
+			overflow: hidden;
+		}
+		#outline {
+			position: absolute;
+			width: 726px;
+			height: 88px;
+			border: 1px #000 solid;
+		}
+		#img {
+			background-image: url(img.jpg);
+		}
+		#frame1 {
+			background-image: url(frame1.png);
+		}
+		#frame2 {
+			background-image: url(frame2.png);
+		}
+		#endframe-headline {
+			background-image: url(endframe-headline.png);
+		}
+		#endframe-logo {
+			background-image: url(endframe-logo.png);
+		}
+		#cta {
+			background-image: url(cta.png);
+		}
+		#cta-over {
+			background-image: url(cta-over.png);
+		}
+		.details {
+			position: absolute;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: #FFF;
+			vertical-align: bottom;
+			text-transform: uppercase;
+		}
+		#dealer-name {
+			position: absolute;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color:#ec008c;
+		}
+
+		.br-300x250 {
+			display: none;
+		}
+		.br-160x600 {
+			display: none;
+		}
+		.br-300x600 {
+			display: none;
+		}
+		.br-728x90 {
+			display: none;
+		}
+		.br-970x250 {
+			display: none;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div id="banner" style="opacity: 1;">
+			<div class="fs" id="img" style="transform: matrix(0.99999, 1e-05, -1e-05, 0.99999, 0, 0);"></div>
+			<div class="fs" id="frame1" style="visibility: hidden; opacity: 0;"></div>
+			<div class="fs" id="frame2" style="visibility: hidden; opacity: 0;"></div>
+			<div class="fs" id="endframe-headline" style="visibility: inherit; opacity: 1;"></div>
+			<div class="fs" id="endframe-logo" style="visibility: inherit; opacity: 1;"></div>
+			<div class="fs" id="cta" style="visibility: inherit; opacity: 1; top: 0px;"></div>
+			<div class="fs" id="cta-over" style="visibility: hidden; opacity: 0; top: 0px;"></div>
+			<div class="details" id="details-credit" style="visibility: inherit; opacity: 1; line-height: 12px; left: 12px; top: 12px; font-size: 12px; transform: matrix(1, 0, 0, 1, 0, 0);">HURRY IN FOR A CREDIT OF UP TO<br class="br-300x250 br-300x600 br-728x90 br-970x250" style="display: block;">$3,000 ON SELECT MODELS NOW<br class="br-300x250 br-300x600 br-728x90 br-970x250" style="display: block;">THROUGH <span class="nov-30" style="display: none;">NOVEMBER 30TH</span><span class="jan-2">JANUARY 2ND</span>.</div>
+			<div class="details" id="details-generic" style="display: none; transform: matrix(1, 0, 0, 1, 0, 0);">HURRY IN FOR exceptional<br class="br-300x250 br-300x600 br-728x90 br-970x250" style="display: block;">offers ON SELECT MODELS<br class="br-300x250 br-300x600 br-728x90 br-970x250" style="display: block;">NOW THROUGH <span class="nov-30" style="display: none;">NOVEMBER 30TH</span><span class="jan-2">JANUARY 2ND</span>.</div>
+			<div id="dealer-name" style="visibility: inherit; opacity: 1; left: 157px; bottom: 11px; font-size: 10px; display: none;">Dealer Name</div>
+
+			<div id="outline"></div>
+			<a href="javascript:void(window.open(window.clickTag))">
+				<div class="fs" id="click-catch"></div>
+			</a>
+			<div id="click-over"></div>
+		</div>
+		<script src="./TweenMax.min.js"></script>
+		<script type="text/javascript">
+//references
+var tw;
+var main = this;
+var bannerContain = document.getElementById("banner");
+var clickCatch = document.getElementById("click-catch");
+//time
+var i;
+var timeFromStart = 0;
+var prevTime = 0;
+var currentTime = 0;
+var deltaTime = 0;
+//state
+var bannerEnd = false;
+//
+//init
+window.onload = function() {
+	//references
+	tw = TweenLite;
+	//defualts
+	CSSPlugin.defaultForce3D = defaultForce3D;
+	//reset elements
+	initGFX();
+	//start
+	tw.delayedCall(0.02, begin);
+}
+function begin(){
+	//show banner
+	tw.to(bannerContain, 0.5, {opacity: 1, ease: Quad.easeOut});
+	//time
+	currentTime = tw.ticker.time;
+	if(needsFrameTick){
+		tw.ticker.addEventListener("tick", frameTick, this, true, 1);
+	}
+	//animation sequence
+	tw.delayedCall(15, function(){
+		bannerEnd = true;
+	});
+	doAnimation();
+}
+function frameTick(event){
+	//time
+	prevTime = currentTime;
+	currentTime = tw.ticker.time;
+	deltaTime = (currentTime - prevTime);
+	timeFromStart += deltaTime;
+	doFrameTick();
+}
+function print(obj){
+	console.log(obj);
+}
+
+//state
+var defaultForce3D = false;
+var needsFrameTick = false;
+
+//references
+var img = document.getElementById("img");
+var frame1 = document.getElementById("frame1");
+var frame2 = document.getElementById("frame2");
+var endframeHeadline = document.getElementById("endframe-headline");
+var endframeLogo = document.getElementById("endframe-logo");
+var dealerName = document.getElementById("dealer-name");
+var cta = document.getElementById("cta");
+var ctaOver = document.getElementById("cta-over");
+
+var conceptSplit = concept.split("-");
+var type = conceptSplit[2];
+
+var details;
+if(type == "Credit"){
+	details = document.getElementById("details-credit");
+	document.getElementById("details-generic").style.display = "none";
+} else {
+	details = document.getElementById("details-generic");
+	document.getElementById("details-credit").style.display = "none";
+}
+
+//
+//size data
+var masterSizeData = {
+	size300x250: {
+		imgStartScale: 1.1,
+		detailPos: {
+			fontSize: "10.2px",
+			bottom: 51,
+			left: 12,
+			lineHeight: "11px"
+		},
+		dealerPos: {
+			fontSize: "11px",
+			top: 231,
+			left: 12
+		}
+	},
+	size300x600: {
+		imgStartScale: 1.1,
+		detailPos: {
+			fontSize: "11px",
+			bottom: 63,
+			left: 12,
+			lineHeight: "11px"
+		},
+		dealerPos: {
+			fontSize: "10.2px",
+			bottom: 12,
+			left: 12
+		}
+	},
+	size728x90: {
+		imgStartScale: 1.1,
+		detailPos: {
+			fontSize: "12px",
+			top: 12,
+			left: 12,
+			lineHeight: "12px"
+		},
+		dealerPos: {
+			fontSize: "10.2px",
+			bottom: 11,
+			left: 157
+		}
+	},
+	size970x250: {
+		imgStartScale: 1.1,
+		detailPos: {
+			fontSize: "10px",
+			bottom: 44,
+			left: 26,
+			lineHeight: "11px"
+		},
+		dealerPos: {
+			fontSize: "10.2px",
+			bottom: 11,
+			left: 171
+		}
+	}
+};
+var sizeData = masterSizeData["size"+sizeType];
+
+//init elements
+function initGFX(){
+	tw.set(img, {scale: sizeData.imgStartScale, force3D: false, rotation: 0.001});
+	tw.set(frame1, {autoAlpha: 0});
+	tw.set(frame2, {autoAlpha: 0});
+	if(sizeType != "970x250" && sizeType != "300x600"){
+		tw.set(endframeHeadline, {autoAlpha: 0});
+	}
+	if(sizeType != "728x90"){
+		tw.set(endframeLogo, {autoAlpha: 0});
+	}
+	tw.set(details, {autoAlpha: 0});
+	tw.set(dealerName, {autoAlpha: 0});
+	tw.set(cta, {autoAlpha: 0});
+	tw.set(ctaOver, {autoAlpha: 0});
+	tw.set(".br-" + sizeType, {display: "block"});
+	if(sizeData.detailPos.top !== undefined){
+		tw.set(details, {fontSize: sizeData.detailPos.fontSize, top: sizeData.detailPos.top, left: sizeData.detailPos.left, lineHeight: sizeData.detailPos.lineHeight});
+	} else {
+		tw.set(details, {fontSize: sizeData.detailPos.fontSize, bottom: sizeData.detailPos.bottom, left: sizeData.detailPos.left, lineHeight: sizeData.detailPos.lineHeight});
+	}
+	if(sizeData.dealerPos.top !== undefined){
+		tw.set("#dealer-name", {fontSize: sizeData.dealerPos.fontSize, top: sizeData.dealerPos.top, left: sizeData.dealerPos.left});
+	} else {
+		tw.set("#dealer-name", {fontSize: sizeData.dealerPos.fontSize, bottom: sizeData.dealerPos.bottom, left: sizeData.dealerPos.left});
+	}
+	var date = conceptSplit[conceptSplit.length-2];
+	if(date == "JAN2"){
+		tw.set(".nov-30", {display: "none"});
+	} else {
+		tw.set(".jan-2", {display: "none"});
+	}
+	var isDealer = (conceptSplit[conceptSplit.length-1] == "Dealer");
+	if(!isDealer){
+		tw.set("#dealer-name", {display: "none"});
+		var yOffset = 0;
+		if(sizeType == "300x250"){
+			yOffset = 14;
+		}
+		if(sizeType == "300x600"){
+			yOffset = 18;
+		}
+		tw.set(cta, {top: yOffset});
+		tw.set(ctaOver, {top: yOffset});
+		tw.set(".details", {y: yOffset});
+	}
+}
+
+//rollover
+function activateRollover(){
+	clickCatch.onmouseover = function(){
+		tw.to(cta, 0.25, {autoAlpha: 0});
+		tw.to(ctaOver, 0.25, {autoAlpha: 1});
+	}
+	clickCatch.onmouseout = function(){
+		tw.to(cta, 0.25, {autoAlpha: 1});
+		tw.to(ctaOver, 0.25, {autoAlpha: 0});
+	}
+}
+
+//frame tick 
+function doFrameTick(){
+}
+
+//animation
+function doAnimation(){
+	var d = 0;
+	d += 0.5;
+	tw.to(frame1, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	d += 2;
+	tw.to(frame1, 0.5, {autoAlpha: 0, ease: Linear.easeNone, delay: d});
+	d += 0.5;
+	tw.to(frame2, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	d += 2;
+	tw.to(frame2, 0.5, {autoAlpha: 0, ease: Linear.easeNone, delay: d});
+	d += 0.5;
+	tw.to(img, d, {ease: Power1.easeOut, scale: 1});
+	tw.to(endframeHeadline, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	d += 0.5;
+	tw.to(details, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	d += 0.5;
+	tw.to(endframeLogo, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	tw.to(cta, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	d += 0.5;
+	tw.to(dealerName, 0.5, {autoAlpha: 1, ease: Linear.easeNone, delay: d});
+	tw.delayedCall(d, activateRollover);
+}
+		</script>
+	
+</body></html>

@@ -1,0 +1,62 @@
+(function(w, d, s) {
+  try {
+    d = w.top.document || d; w = w.top.document ? w.top : w;
+  } catch (e) {}
+  var ttag = function() {
+    var _tt_slot = window.top.document.querySelectorAll(".card.collection-item")[1];
+if(window.top.innerWidth < 800) {
+_tt_slot = window.top.document.querySelectorAll(".card.collection-item")[5];
+}
+    w.teads.page(74739).placement(81181, {slider: {allow_corner_position: false, allow_top_position: false}, "css":"margin: 16px auto; max-width: 550px;","callbacks":{"AdLoaded":function () {var teadsInRead = window.top.document.querySelectorAll(".teads-inread");
+for (var i = 0; i < teadsInRead.length; i++) {
+var teadsPlayer = window.top.document.querySelectorAll(".teads-player")[i];
+var teadsLabel = window.top.document.querySelectorAll(".teads-ui-components-label")[i];
+var teadsCredits = window.top.document.querySelectorAll(".teads-ui-components-credits")[i];
+teadsCredits.parentNode.insertBefore(teadsCredits, teadsPlayer);
+teadsLabel.parentNode.insertBefore(teadsLabel, teadsPlayer.nextElementSibling);
+teadsLabel.setAttribute("style", "color: #999!important; font-family: Benton Medium!important; font-size: 9px!important; text-align: right!important; line-height: 16px;!important; font-weight: 400!important;");
+}
+window.top.document.querySelectorAll(".card.collection-item")[1].children[0].children[0].style.marginBottom = "40px";
+if(window.top.innerWidth < 800) {
+window.top.document.querySelectorAll(".card.collection-item")[5].children[0].children[1].style.marginBottom = "40px";
+}},"AdError":function () {window.top.document.querySelectorAll(".card.collection-item")[1].children[0].children[0].style.marginBottom = "0px";
+if(window.top.innerWidth < 800) {
+window.top.document.querySelectorAll(".card.collection-item")[5].children[0].children[1].style.marginBottom = "0px";
+}
+if (location.href.indexOf('disable-oratv') < 0) {
+	var div = window.document.createElement('div'),
+	_tt_inread = window.top.document.querySelector('.teads-inread');
+	div.className = 'trb_ar_ora';
+	div.style.cssText = 'max-width:400px;margin:24px auto';
+	div.innerHTML = '<div class=trb_ar_ora_w style="position:relative;padding-top:75%"><iframe src="//www.ora.tv/embed/partner/tronc_latimes/playlist/318/v/1?break_aspect_ratio=true" frameborder=0 scrolling=no webkitallowfullscreen mozallowfullscreen allowfullscreen class="trb_ar_ora_i" style="position:absolute;top:0; left:0;width:100%;height:100%"></iframe></div>';
+	_tt_inread.parentNode.insertBefore(div, _tt_inread);
+}},"AdUserClose":function () {window.top.document.querySelectorAll(".card.collection-item")[1].children[0].children[0].style.marginBottom = "0px";
+if(window.top.innerWidth < 800) {
+window.top.document.querySelectorAll(".card.collection-item")[5].children[0].children[1].style.marginBottom = "0px";
+}},"AdSkipped":function () {window.top.document.querySelectorAll(".card.collection-item")[1].children[0].children[0].style.marginBottom = "0px";
+if(window.top.innerWidth < 800) {
+window.top.document.querySelectorAll(".card.collection-item")[5].children[0].children[1].style.marginBottom = "0px";
+}},"AdImpression":function () {window.top.document.querySelector('.teads-ui-components-adchoices').style.left = "5px";}},"format":"inread","slot":{"btf":false,"filter":function filter(slot) {var result = true;
+var pageCheck = window.top.location.pathname;
+if (pageCheck.match(/htmlstory.html/g)) {
+  result = false;
+}
+return result;},"selector":_tt_slot,"minimum":1}}).passback(function passback() {window.top.document.querySelectorAll(".card.collection-item")[1].children[0].children[0].style.marginBottom = "0px";
+if(window.top.innerWidth < 800) {
+window.top.document.querySelectorAll(".card.collection-item")[5].children[0].children[1].style.marginBottom = "0px";
+}
+if (location.href.indexOf('disable-oratv') < 0) {
+	var div = window.document.createElement('div'),
+	_tt_inread = window.top.document.querySelector('.teads-inread');
+	div.className = 'trb_ar_ora';
+	div.style.cssText = 'max-width:400px;margin:24px auto';
+	div.innerHTML = '<div class=trb_ar_ora_w style="position:relative;padding-top:75%"><iframe src="//www.ora.tv/embed/partner/tronc_latimes/playlist/318/v/1?break_aspect_ratio=true" frameborder=0 scrolling=no webkitallowfullscreen mozallowfullscreen allowfullscreen class="trb_ar_ora_i" style="position:absolute;top:0; left:0;width:100%;height:100%"></iframe></div>';
+	_tt_inread.parentNode.insertBefore(div, _tt_inread);
+}}).serve();
+  };
+  if (w.teads && w.teads.page) { ttag(); }
+  else if (!w.teadsscript) {
+    s.src = '//a.teads.tv/media/format/v3/teads-format.min.js';
+    s.async = true; s.onload = ttag; w.teadsscript = d.getElementsByTagName('head')[0].appendChild(s);
+  }
+})(window, document, document.createElement('script'));

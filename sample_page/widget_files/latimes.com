@@ -1,0 +1,1 @@
+PARSELY.pInit({"apikey":"latimes.com","bundle":"/code/ptrack-v1.1.1.js","customizations":null,"track_third_party_cookies":true,"track_ip_addresses":true,"settings":{"tracker":true,"widget":false,"debug":false},"uuid":"d5bed72c-6259-461b-9456-4b03d3249167","network_uuid":"ace664ec-9b60-4fa9-b985-e10fa76e1dc7","apikey_uuid":"d5bed72c-6259-461b-9456-4b03d3249167"});

@@ -1,0 +1,1 @@
+(function(){if(window.services){if(window.services.sliderService){window.services.sliderService.checkDevice();window.services.sliderService.vanishTicker()}if(window.services.StickyServiceAppBar)window.services.StickyServiceAppBar.reSetHeight();if(window.services.imageService)window.services.imageService.polyfillObjectFit()}})();

@@ -1,4 +1,3 @@
-
 let list = []
 let renderListHTML = ''
 
@@ -14,29 +13,45 @@ renderList = () => {
 
 	debugger;
 
-	renderListHTML = list.map((item, index) => {
+	// let renderListHTML = list.map((item, index) => {
+	// 		if (item.type === 'text') {
 
-		return (
-			`<p id=${index}>
-				<h2>${item.name}</h2><br>
-				<img src=${item.thumbnail[0].url} height=${item.thumbnail[0].height} width=${item.thumbnail[0].width} alt=${item.name}/><br>
-				<h4>${item.description}</h4>
-				type: ${item.type}<br>
-				name: ${item.name}<br>
-				created: ${item.created}<br>
-				branding: ${item.branding}<br>
-				duration: ${item.duration}<br>
-				categories: ${item.categories}<br>
-				views: ${item.views}<br>
-				pixels: ${item.pixels}<br>
-				id: ${item.id}<br>
-				origin: ${item.origin}<br>
-				url: ${item.url}<br>
-				</p>
-			`
-		)
-	})
-	loadHtml()
+	// 		}
+	// 		if (item.type === 'video') {
+
+	// 		}
+	// 		if (item.type === 'photo' && item.description) {
+
+	// 		}
+	// 		if (item.type === 'photo') {
+
+	// 		}
+
+
+
+
+	return (
+		`
+<div class="container">
+	<div class="columns">
+		<div class="column"><h1 class="title is-1">${item.name}</h1></div>
+		<div class="column"><h1 class="title is-1">${item.branding}</h1></div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<img src=${item.thumbnail[0].url} height=${item.thumbnail[0].height} width=${item.thumbnail[0].width} alt=${item.name} />
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<h4>${item.description}</h4>
+		</div>
+	</div>
+</div> 
+`
+	)
+})
+loadHtml()
 }
 
 loadHtml = () => {
